@@ -1,7 +1,15 @@
-clone:
-  depth: full
+image: atlassian/default-image:3
+
 pipelines:
   default:
-    - step:
-        script:
-          - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
+    - parallel:
+      - step:
+          name: 'Build and Test'
+          script:
+            - echo "Your build and test goes here..."
+  branches:
+    main:
+      - step:
+          name: "Sync with github"
+          script:
+             - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
