@@ -7,6 +7,7 @@ pipelines:
           name: 'Build and Test'
           script:
             - pipe: atlassian/git-secrets-scan:0.6.1
+  branches:
     main:
       - step:
           name: "Sync with github"
