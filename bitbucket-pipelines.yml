@@ -6,7 +6,7 @@ pipelines:
       - step:
           name: 'Build and Test'
           script:
-            - pipe: atlassian/git-secrets-scan:0.6.1
+            - echo "Your build and test goes here..."
   branches:
     main:
       - step:

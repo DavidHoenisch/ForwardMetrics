@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>User Prefernces</title>
+        <meta name="description" content="This page is used for account sign up">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/main.css" />
+    </head>
+    <body>
+        <div>
+            <H1>User Prefenences</H1>
+            <form id="SignUpForom" method="POST">
+                <p></p>
+                <label for="av_key">Alpha Vantage API</label><br>
+                <input type="password" name="av_key" id="av_key"><br>
+                <input type="submit" name="Submit" id="submit_button">Update<br>
+            </form>
+            <div>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                        <h4>{{ message }}</h4>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                {% endwith %}
+                {% block body %}{% endblock %}
+            </div> 
+        </div>
+    </body>
+    <p>
+        NOTES: 
+
+    required form fields
+
+        - User name
+
+        - Email
+
+        - password reset
+
+
+        ALPHA VANTAGE: 
+
+        - Alphavantage API Key
+        - Have checkbox that will make api-key visible. will be imputed like a password by default
+
+        - Time series data type (ex. instra_day | Make more human understandable)
+    
+        - Option to Save prophet configuration for future use 
+        
+    </p>
+</html>
+
+
