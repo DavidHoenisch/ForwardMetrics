@@ -26,7 +26,7 @@ def prophet():
     if request.method == 'POST':
         print("first check")
         if 'file' not in request.files:
-            print('No file part')
+            print('No file uploaded')
             return redirect(request.url)
         file = request.files['file']
         periods = request.form.get('periods')
@@ -43,8 +43,6 @@ def prophet():
 
     return render_template("prophet.html")
         
-        
-        
 @user_dash.route("json_data")
 def json_data():
     return ("test")
@@ -55,7 +53,7 @@ def json_data():
 def download_page():
     return render_template("downloads_page.html")
 
-@user_dash.route("/download")
+@user_dash.route("/downloads")
 @login_required
 def downloads ():
     path = os.path.join(DOWNLOAD_FOLDER, EXPORT_FILE)

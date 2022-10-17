@@ -25,8 +25,10 @@
         </div> 
         <div>
             <h2>File upload</h2>
-            <form id="FileUploadConfiguration">
-                <input type=file name=file><br>
+            <form id="FileUploadConfiguration" method="POST" enctype=multipart/form-data>
+                <input type="file" name="file" id="file"><br>
+                <br>
+                <input type="number" name="periods" id="periods"><br>
                 <br>
                 <input type=submit value=Upload> 
             </form>
@@ -36,7 +38,7 @@
                 File Download
             </h2>
             <p>
-                <a href="{{ url_for('user_dash.download') }}">Download</a>
+                <a href="{{ url_for('user_dash.downloads') }}">Download</a>
             </p>
         </div>
     </body>
