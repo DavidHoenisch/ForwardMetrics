@@ -29,10 +29,12 @@ def forwardmetrics():
     from .auth import auth
     from .user_dashboard import user_dash
     from .docs import docs
+    from .api import api
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/")
     app.register_blueprint(user_dash, url_prefix="/user/" )
     app.register_blueprint(docs, url_prefix="/") 
+    app.register_blueprint(api, url_prefix="/api/")
 
 
     check_db(app)

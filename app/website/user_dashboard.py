@@ -4,7 +4,7 @@ from shutil import register_unpack_format
 from urllib.parse import uses_relative
 from flask import Blueprint, render_template, url_for
 from flask_login import login_required, current_user
-from flask import request, flash, redirect, send_file
+from flask import request, flash, redirect, send_file, jsonify
 from .proph import api_predict, EXPORT_FILE
 from .proph import upload_predict
 from . import db, allowed_file, UPLOAD_FOLDER, DOWNLOAD_FOLDER
@@ -103,4 +103,10 @@ def preferences():
         print(user_id)
 
     return render_template("preferences.html")
-    
+
+@user_dash.route("/json/<uuid>", methods=['GET'])
+@login_required
+def get_json(uuid):
+    content = request.json
+    print(content[''])
+    return jsonify({"uuid":uuid})
