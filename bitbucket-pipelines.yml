@@ -1,13 +1,5 @@
 image: atlassian/default-image:3
-
 pipelines:
-  default:
-    - parallel:
-      - step:
-          name: 'Build and Test'
-          script:
-            - pipe: atlassian/git-secrets-scan:0.6.1
-
   custom:
     vulnScan:
       - step:
@@ -21,5 +13,18 @@ pipelines:
             - git add bandit-report SBOM.json
             - git commit -m "Hello from inside the pipeline -> committing artifacts"
             - git push
+    gitScan:
+     - step:
+        name: "scan git for secrets"
+        script:
+          - pipe: atlassian/git-secrets-scan:0.6.1
+
+  branches:
+    main:
+      - step:
+          name: "Sync with github"
+          deployment: Production
+          script:
+             - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
 
 
