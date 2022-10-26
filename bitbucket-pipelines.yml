@@ -3,10 +3,10 @@ image: atlassian/default-image:3
 pipelines:
   default:
     - parallel:
-      - step:
-          name: 'Build and Test'
-          script:
-            - pipe: atlassian/git-secrets-scan:0.6.1
+#      - step:
+#          name: 'Build and Test'
+#          script:
+#            - pipe: atlassian/git-secrets-scan:0.6.1
       - step:
           name: "Build SBOM, and scan application for know vulns"
           script:
