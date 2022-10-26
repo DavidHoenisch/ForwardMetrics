@@ -3,10 +3,13 @@ image: atlassian/default-image:3
 pipelines:
   default:
     - parallel:
-#      - step:
-#          name: 'Build and Test'
-#          script:
-#            - pipe: atlassian/git-secrets-scan:0.6.1
+      - step:
+          name: 'Build and Test'
+          script:
+            - pipe: atlassian/git-secrets-scan:0.6.1
+
+  custom:
+    vulnScan:
       - step:
           name: "Build SBOM, and scan application for know vulns"
           script:
@@ -26,4 +29,5 @@ pipelines:
           deployment: Production
           script:
              - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
+
 
