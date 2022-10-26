@@ -7,6 +7,18 @@ pipelines:
           name: 'Build and Test'
           script:
             - pipe: atlassian/git-secrets-scan:0.6.1
+      - step:
+          name: "Build SBOM, and scan application for know vulns"
+          script:
+            - apt update 
+            - apt install bandit pyton3 python3-pip -y
+            - pip3 install cyclonedx-bom
+            - bandit -r . -o bandit-report -f txt 
+            - cyclonedx-py -r -o SBOM.json --format json
+            - git add bandit-report SBOM.json
+            - git commit -m "Hello from inside the pipeline -> committing artifacts"
+            - git push
+
   branches:
     main:
       - step:
@@ -14,3 +26,4 @@ pipelines:
           deployment: Production
           script:
              - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
+
