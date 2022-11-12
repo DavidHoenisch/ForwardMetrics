@@ -6,144 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Forward Metrics App"/>
     <title id="title">Home</title>
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="..\static\css\main.css">
 </head>
 <body>
     <header>
         <!-- Main Logo on Navbar -->
-        <img src="../static/images/forward-logo-text-black-white.png" alt="logo" id="header-logo"/>
+        <a id="logo" href="#hero-img"><img src="..\static\images\forward-logo-text-black.png" alt="logo" id="header-logo"/></a>
         <nav id="navbar">
             <!-- Navbar Buttons -->
-            <ul class="navlist">
-                <li>Home</li>
-                <li>Features</li>
-                <li>About</li>
-                <li>Login</li>
+            <ul id="navlist">
+                <a href="#hero-img"><li>Home</li></a>
+                <a href="#b-section"><li>Features</li></a>
+                <a href="#d-container"><li>About</li></a>
+                <a href=""><li>Login</li></a>
             </ul>
+            <input type="checkbox" id="hamburger-input" class="burger-shower"/>
+            <label id="hamburger-menu" for="hamburger-input">
+                <nav id="sidebar-menu">
+                <ul>
+                    <li><a href="#hero-img">Home</a></li>
+                    <li><a href="#b-section">Features</a></li>
+                    <li><a href="#d-container">About</a></li>
+                    <li>Login</li>
+                </ul>
+            </nav>
+        </label>
         </nav>
     </header>
     <main>
         <!-- Hero Img -->
         <section id="hero-img">    
             <div>
-                <img src="../static/images/Hero-image2.jpg" alt="header img" id="header-img"/>
-                    <p class="hero-logo2" id="headertag">Investment Tracking and Forcasting Enhanced</p>
-                    <p class="hero-logo2" id="headerparagraph">Data and Tracking to Power Up your Portfolio</p>
+                <img src="..\static\images\Pexels2.jpg" alt="header img" id="header-img"/>
+                    <p class="hero-logo2" id="headertag">Data and Tracking to Power Up your Portfolio</p>
+                    <p class="hero-logo2" id="headerparagraph">Investment Tracking and Forcasting</p>
             </div>
         </section>
-        <!-- Example App + Short Descriptor -->
-        <section>
-        <div>
-            <h1></h1>
-            <p></p>
-            <div class="tradingview-widget-container">
-                <div id="tradingview_92fc5"></div>
-                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSDT Chart</span></a> by TradingView</div>
-                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                <script type="text/javascript">
-                new TradingView.widget(
-                {
-                "autosize": false,
-                "symbol": "BINANCE:BTCUSDT",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "dark",
-                "style": "1",
-                "locale": "en",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_92fc5"
-            }
-                );
-                </script>
-            </div> 
-        </div>
-        </section>
+        
+        <!-- Introductory Text -->
         <!-- Features Section -->
         <section>
-            <div>
-                <h1></h1>
-                <p></p>
+            <div class="a-container1">
+            <div class="a-container2">
+                <h1>Powerful Forcasting<br> Capabilities</h1>
             </div>
-            <div>
+            <div class="a-container3">
+                <h2>Be on the cutting edge of investment technology</h2>
+                <p>Features that allow you to manage your investments with insights into the future of the markets. This includes an customizable interface that displays future potential market growth.</p>
+                <button type="button" class="button1" value="Try It Out">Explore More!</button>
+            </div>
+            </div>
+        </section>
+        <!-- Icons and Descriptions -->
+        <section id="b-section" class="b-section">
+            <div id="b-container1" class="b-container1">
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\security.png" alt="security img" class="b-icon">
+                    <h2>Advanced Security</h2>
+                    <p>We put the safety of<br> your information first</p>
                 </div>
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\analytics.png" alt="analytics img" class="b-icon">
+                    <h2>Highly Accurate</h2>
+                    <p>Forcasting using decades of data</p>
                 </div>
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\cash.png" alt="cash img" class="b-icon">
+                    <h2>Proven Returns</h2>
+                    <p>Valuable market <br> information</p>
                 </div>
             </div>
-            <div>
+            <div class="b-container2">
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\market-prediction.png" alt="prediction img" class="b-icon">
+                    <h2>Extremely Adaptable</h2>
+                    <p>Constantly configuring to<br> new market conditions</p>
                 </div>
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\data.png" alt="data img" class="b-icon dataicon">
+                    <h2 class="dataicon">Intuitive Interface</h2>
+                    <p class="dataicon">Designed to provide value to<br> new and advance users</p>
                 </div>
                 <div>
-                    <img>
-                    <h2></h2>
-                    <p></p>
+                    <img src="..\static\images\crypto-decentralized.png" alt="decentralized img" class="b-icon">
+                    <h2>Innovative</h2>
+                    <p>Evolving to incorporate ground <br> breaking technology</p>
                 </div>
             </div>
         </section>
-        <!-- Long Descriptor -->
-        <section>
-            <div></div>
-            <div>
-                <div></div>
-                <div>
-                    <p></p>
+
+ <!-- Example App + Short Description -->
+ <section>
+    <div class="dashboard-text">
+        <h1>The Metrics Dashboard</h1>
+        <p>Allowing you to keep track of your portfolio at a glance.</p>
+        <div class="dashboard">
+        <img src="..\static\images\Dashboard Screenshot2.jpg" alt="dashboard-img" id="dashboard-img"/>
+        </div>
+    </div>
+    </section>
+<!-- Get Started -->
+<section>
+    <div class="c-container-1">
+        <h1>Need to see it in Action?</h1>
+        <p>Check it out for yourself!</p>
+        <button type="button" class="button1" value="Try It Out">Try it out!</button>
+    </div>
+</section>
+        <!-- Long Description -->
+        <section id="d-container" class="d-container">
+                <img src="..\static\images\Pexels1.jpg" alt="long-pitch-img" id="d-container-img"/>
+                <div class="d-container3">
+                    <h1>How Forward Metrics Works</h1>
+                    <p class="d-container-p">We use open source Machine Learning to analyse market data and predict future movements of any type of investment. Users can use data that we supply or input their own data and the algorithm will make a prediction. The algorithm is highly accurate and quickly adapts to the new information. Having been proven through rigorous testing, the system many times surpasses traditional forms of market forcasting.</p>
                     <!-- button -->
                 </div>
-            </div>
-            <div></div>
         </section>
-        <!-- Get Started -->
-        <section>
-            <div>
-                <h1></h1>
-                <p></p>
-                <!-- buttons -->
-            </div>
-        </section>
+        
         <!-- Footer -->
-        <section>
-           <div>
-            <!-- logo -->
-            <!-- contact email -->
+        <section class="f-container-1">
+            <div class="f-container">
+                <p>Interested in staying up to date<br> as we roll out new features?<br>Sign up for our Newsletter!</p>
+                <!-- textfield -->
+                <form action="/action_page.php">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input class="button1" type="submit">
+                </div>
+           <div class="f-container">
+            <img src="..\static\images\forward-logo-black-white.png" alt="logo" id="footer-logo"/>
            </div> 
-           <div>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <!-- button -->
-           </div>
-           <div>
-            <p>Recieve Updates</p>
-            <p>Email</p>
-            <!-- textfield -->
-            <!-- submit button -->
-           </div>
-           <div>
-            <p>Follow Us On</p>
-            <!-- Socials Buttons -->
-           </div>
+           <!-- <ul class="f-container">
+                <a href="#hero-img"><li>Home</li></a>
+                <a href="#b-section"><li>Features</li></a>
+                <a href="#d-container"><li>About</li></a>
+            <li><a>Login</a></li> -->
+           </ul>
         </section>
     </main>
 </body>
