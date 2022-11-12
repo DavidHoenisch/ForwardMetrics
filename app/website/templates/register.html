@@ -30,7 +30,7 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"><img src="..\static\images\Pexels3.jpg" alt="hero-img" class="" id="hero-img"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -65,16 +65,16 @@
                                 <input type="submit" name="Submit" id="submit_button">
                                 <hr>
                             </form>
-                            {% with messages = get_flashed_messages() %}
-                            {% if messages %}
-                                <ul class=flashes>
+                            <!-- {% with messages = get_flashed_messages() %}
+                            {% if messages %} -->
+                                <!-- <ul class=flashes>
                                 {% for message in messages %}
                                     <h4>{{ message }}</h4>
                                 {% endfor %}
                                 </ul>
                             {% endif %}
                             {% endwith %}
-                            {% block body %}{% endblock %}
+                            {% block body %}{% endblock %} -->
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="/login">Already have an account? Login!</a>
