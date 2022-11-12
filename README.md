@@ -1,21 +1,14 @@
-## Forward Metrics
+# Forward Metrics
 
+Forward metrics makes use of existing ML/AI projects such as Facebooks prophet in order to bring a managed service to our users that allows them to more easily employ machine learning tools to their financial endevours.  
 
-### Running the Web app
+---
 
-1. install python3 from here: https://www.python.org/downloads/
-2. reboot
-3. install all the required packages by running `pip3 install -r requirements.txt` from the root of the application directory
-4. move into that application directory `forward-metrics-web-application/app` and run `python3 .\app.py`
+# Releases
 
-this will spin up a local working version of the application.  The url will be noted in the command out put but will most likely be `http://127.0.0.1:5000`
+- alpha 1 [Release notes](ReleaseNotes/alpha-0.0.1.md) 
+  
+  
+# DISCLAIMER
 
-
-
-### NOTES
-
-```
-<a href="{{ url_for('user', Users_username = current_user.username ) }}" 
-target="_blank" rel="noopener noreferrer">Settings</a>
-
-```
+Forward metrics is not offering any kind of financial advice.  ForwardMetrics developers assume no responsibiility for any financial loss incured. Users should do their own research and make their own discisions.  Users should understand that machine learning, such as Prophet is not a crystal ball.  
