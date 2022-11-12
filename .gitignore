@@ -54,5 +54,6 @@ Thumbs.db
 .venv
 venv
 env
-#vscode
+
+# VS Code IDE
 .vscode
