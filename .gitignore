@@ -52,6 +52,6 @@ Thumbs.db
 #python
 .venv
 venv
-
+env
 #vscode
 .vscode
