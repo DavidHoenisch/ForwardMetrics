@@ -12,7 +12,7 @@ pipelines:
             - cyclonedx-py -r -o SBOM.json --format json
             - git add bandit-report SBOM.json
             - git commit -m "Hello from inside the pipeline -> committing artifacts"
-            - git push
+            - git 
     gitScan:
      - step:
         name: "scan git for secrets"
@@ -26,5 +26,3 @@ pipelines:
           deployment: Production
           script:
              - git push --mirror git@github.com:DavidHoenisch/ForwardMetrics.git
-
-
