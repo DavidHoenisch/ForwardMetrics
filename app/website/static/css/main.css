@@ -170,8 +170,9 @@ a {
 
 /* Hero Img Placement*/
 #hero-img {
-    max-height:1100px;
-    min-height: 900px;
+    height: 800px;
+    max-width: 1800px;
+    margin:auto;
     position: relative;
     z-index: -2;
 }

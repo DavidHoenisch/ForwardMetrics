@@ -41,4 +41,4 @@ No fixes, initial release
 
     1. dockerize application
     2. run application in kubernetes application
-    3. 
+    3. refine application logging for better debugging and security
