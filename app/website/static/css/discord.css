@@ -163,15 +163,21 @@ a {
 
 .section1 {
     text-align: center;
-    max-width: 1250px;
-    margin: auto;    
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: relative;
+    max-width: 1200px;
+    min-width: none;   
 }
 
 #hero-img {
-    max-width: 1200px;
-    height: auto;
     border-radius: 15px;
-    
+    display: relative;
+    max-width: 1200px;
+    min-width: none;
+    height: 800px;
+    z-index: -1;
 }
 
 li {
@@ -181,15 +187,16 @@ li {
 #header-logo {
     width: 150px; 
     margin-left: 50px;
+    z-index: 1;
 }
 
 .hero-txt {
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
-    transform: translate(-50%, -100%);
-    text-align: center;
-    
+    transform: translate(-50%, -50%);
+
+
 }
 
 #discord-logo {
