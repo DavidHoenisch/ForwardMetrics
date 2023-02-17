@@ -3,7 +3,7 @@ FROM python:3.10.6
 WORKDIR /opt/fwapp_frontent
 
 # Copy over application code
-COPY app/main.py .
+COPY app/app.py .
 COPY app/website/ ./website/
 COPY requirements.txt .
 
