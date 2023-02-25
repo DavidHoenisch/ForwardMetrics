@@ -12,7 +12,7 @@ RUN pip install -r requirements.txt
 RUN pip install "uvicorn[standard]" gunicorn
 
 # Expose port 8000
-EXPOSE 5000
+EXPOSE 5001
 
 # Run the application
-CMD ["/bin/sh", "-c", "uvicorn main:app --workers 4 --host 0.0.0.0 --port 5000"]
+CMD ["/bin/sh", "-c", "uvicorn main:app --workers 4 --host 0.0.0.0 --port 5001"]

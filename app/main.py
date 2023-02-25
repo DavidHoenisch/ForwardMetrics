@@ -1,5 +1,8 @@
 from website import forwardmetrics
 
 app = forwardmetrics()
-app.run()
+
+if __name__ == "__main__":
+
+    app.run()
     
