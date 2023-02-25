@@ -13,3 +13,8 @@ def home():
 @views.route("/signup")
 def login():
     return render_template("discord.html")
+
+
+@views.route("/about")
+def about():
+    return render_template("about.html")

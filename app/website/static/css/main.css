@@ -417,3 +417,8 @@ a {
 #email {
     padding: 14px;
 }
+
+#about {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center
+}
