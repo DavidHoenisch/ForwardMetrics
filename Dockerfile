@@ -15,4 +15,4 @@ RUN pip install "uvicorn[standard]" gunicorn
 EXPOSE 5000
 
 # Run the application
-CMD ["/bin/sh", "-c", "python3 app/main.py"]
+CMD ["/bin/sh", "-c", "python3 ./main.py"]
