@@ -15,4 +15,4 @@ RUN pip install "uvicorn[standard]" gunicorn
 EXPOSE 5000
 
 # Run the application
-CMD ["/bin/sh", "-c", "uvicorn main:app --workers 4 --host 0.0.0.0 --port 5000"]
+CMD ["/bin/sh", "-c", "python3 app/main.py"]
