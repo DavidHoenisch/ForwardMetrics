@@ -422,3 +422,11 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center
 }
+
+#about-body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 100px
+}
